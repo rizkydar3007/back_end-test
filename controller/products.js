@@ -1,7 +1,9 @@
 const model = require("../config/model/index");
 const controller = {};
 
-controller.createProduct = async function (req, res) {};
+controller.createProduct = async function (req, res) {
+    
+};
 
 controller.listProduct = async function (req, res) {};
 

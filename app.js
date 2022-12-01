@@ -7,9 +7,9 @@ const bodyParser = require("body-parser");
 const mainRouter = require("./routes/index");
 
 app.use(cors());
-// const swaggerUi = require("swagger-ui-express");
-// const api = require("./api.json");
-// app.use("/api-docs/user", swaggerUi.serve, swaggerUi.setup(api));
+const swaggerUi = require("swagger-ui-express");
+const api = require("./api.json");
+app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(api));
 app.use(morgan("dev"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
